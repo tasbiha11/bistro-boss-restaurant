@@ -13,7 +13,7 @@ const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         // Fetch your JSON data and update the state
-        fetch('reviews.json')
+        fetch('http://localhost:5000/reviews')
             .then(response => response.json())
             .then(data => setReviews(data))
             .catch(error => console.error('Error loading reviews:', error));
