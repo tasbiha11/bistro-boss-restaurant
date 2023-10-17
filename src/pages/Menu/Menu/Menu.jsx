@@ -12,7 +12,7 @@ import MenuCategory from '../MenuCategory/MenuCategory';
 
 const Menu = () => {
     const [menu] = useMenu();
-    const dessert = menu.filter(item => item.category === 'dessert');
+    const desserts = menu.filter(item => item.category === 'dessert');
     const soup = menu.filter(item => item.category === 'soup');
     const salad = menu.filter(item => item.category === 'salad');
     const pizza = menu.filter(item => item.category === 'pizza');
@@ -20,37 +20,18 @@ const Menu = () => {
     return (
         <div>
             <Helmet>
-                <title>Bistro | Menu</title>
+                <title>Bistro Boss | Menu</title>
             </Helmet>
             <Cover img={menuImg} title="our menu"></Cover>
             {/* main cover */}
-            <SectionTitle subHeading='Dont Miss' heading="Todays offer"></SectionTitle>
+            <SectionTitle subHeading="Don't Miss" heading="Today's Offer"></SectionTitle>
             {/* offered menu items */}
-            <MenuCategory item={offered}></MenuCategory>
-            {/* dessert menu items */}
-            <MenuCategory
-                item={dessert}
-                title="dessert"
-                img={dessertImg}
-            ></MenuCategory>
-            {/* pizza menu items */}
-            <MenuCategory
-                item={pizza}
-                title="pizza"
-                img={pizzaImg}
-            ></MenuCategory>
-            {/* soup menu items */}
-            <MenuCategory
-                item={soup}
-                title="soup"
-                img={soupImg}
-            ></MenuCategory>
-            {/* salad menu items */}
-            <MenuCategory
-                item={salad}
-                title="salad"
-                img={saladImg}
-            ></MenuCategory>
+            <MenuCategory items={offered}></MenuCategory>
+            {/* dessert menu items  */}
+            <MenuCategory items={desserts} title="dessert" img={dessertImg}></MenuCategory>
+            <MenuCategory items={pizza} title={"pizza"} img={pizzaImg}></MenuCategory>
+            <MenuCategory items={salad} title={"salad"} img={saladImg}></MenuCategory>
+            <MenuCategory items={soup} title={"soup"} img={soupImg}></MenuCategory>
         </div>
     );
 };
