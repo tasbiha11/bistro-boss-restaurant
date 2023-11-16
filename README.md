@@ -1,11 +1,16 @@
 <h1>Project Overview:</h1>
 <h4>Tech Stack:</h4>
-Frontend: ReactJS, Vite (for fast development), Tailwind CSS (for styling), Tanstack Query (for efficient data fetching)
-Backend: Node.js with Express
-Authentication: Integrated Firebase Authentication for secure login and signup, JWT token for enhanced security
-Database: MongoDB for efficient data storage
-Payment Integration: Implemented Stripe for seamless and secure payment processing
-State Management: Utilized Tanstack Query for efficient and declarative data fetching
+->Frontend: ReactJS, Vite (for fast development), Tailwind CSS (for styling), Tanstack Query (for efficient data fetching)
+</br>
+->Backend: Node.js with Express
+</br>
+->Authentication: Integrated Firebase Authentication for secure login and signup, JWT token for enhanced security
+</br>
+->Database: MongoDB for efficient data storage
+</br>
+->Payment Integration: Implemented Stripe for seamless and secure payment processing
+</br>
+->State Management: Utilized Tanstack Query for efficient and declarative data fetching
 
 <h1>Features and Functionalities:</h1>
 
