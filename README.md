@@ -23,7 +23,8 @@
 >Implemented a cart system allowing users to add, edit, and remove items before proceeding to checkout.
 
 <h4>Cart Management:</h4>
->Created a dynamic cart section using Tanstack Query, allowing users to easily edit the quantity and contents of their selected items.
+>Created a dynamic cart section using Tanstack Query, allowing users to easily edit the quantity and contents of their selected items
+</br>
 >Ensured a smooth and intuitive user experience for managing orders in the cart.
 
 <h4>Checkout and Stripe Payment:</h4>
