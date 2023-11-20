@@ -18,6 +18,7 @@ import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
 import Payment from "../pages/Dashboard/Payment/Payment";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import Error from "../pages/Error/Error";
 
 
 export const router = createBrowserRouter([
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
             {
                 path: 'secret',
                 element: <PrivateRoute><Secret></Secret> </PrivateRoute>
+            },
+            {
+                path: '*',
+                element: <Error></Error>
             }
         ]
     },

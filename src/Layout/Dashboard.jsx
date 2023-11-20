@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { FaShoppingCart, FaWallet, FaCalendarAlt, FaHome, FaUtensils, FaUsers } from 'react-icons/fa';
+import { FaShoppingCart, FaWallet, FaHome, FaUtensils, FaUsers } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdAddShoppingCart } from 'react-icons/md';
 import useCart from "../hooks/useCart";
@@ -7,9 +7,6 @@ import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
     const [cart] = useCart();
-
-    //TODO: LOAD DATA FROM THE SERVER TO HAVE DYNAMIC isAdmin BASED ON DATA
-    // const isAdmin = true;
     const [isAdmin] = useAdmin();
 
     return (
@@ -29,12 +26,9 @@ const Dashboard = () => {
                             <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>Admin Home</NavLink></li>
                             <li><NavLink to="/dashboard/addItem"><FaUtensils></FaUtensils> Add an Item</NavLink></li>
                             <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet> Manage Items</NavLink></li>
-                            {/* <li><NavLink to="/dashboard/history"><FaBook></FaBook> Manage Bookings</NavLink></li> */}
                             <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers>All Users</NavLink></li>
                         </> : <>
                             <li><NavLink to="/dashboard/userhome"><FaHome></FaHome> Home</NavLink></li>
-                            <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li>
-                            <li><NavLink to="/dashboard/history"><FaWallet></FaWallet> Payment History</NavLink></li>
                             <li>
                                 <NavLink to="/dashboard/mycart"><FaShoppingCart></FaShoppingCart> My Cart
                                     <span className="badge inl badge-secondary">+{cart?.length || 0}</span>
@@ -44,14 +38,11 @@ const Dashboard = () => {
                         </>
                     }
 
-
-
-
                     <div className="divider"></div>
 
                     <li><NavLink to="/"><FaHome></FaHome> Home</NavLink></li>
                     <li><NavLink to="/menu"><GiHamburgerMenu></GiHamburgerMenu> Our Menu</NavLink></li>
-                    <li><NavLink><MdAddShoppingCart></MdAddShoppingCart>Order Food</NavLink></li>
+                    <li><NavLink to="/order/salad"><MdAddShoppingCart></MdAddShoppingCart>Order Food</NavLink></li>
                 </ul>
 
             </div>
